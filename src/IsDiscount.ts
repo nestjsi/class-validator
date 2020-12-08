@@ -30,10 +30,10 @@ export function IsDiscount(validationOptions?: ValidationOptions): PropertyDecor
           if (!isNumber(value, { allowInfinity: false, allowNaN: false, maxDecimalPlaces: 2 })) {
             return false;
           }
-          if (!min(value, args.constraints[0])) {
+          if (!min(value, args!.constraints[0])) {
             return false;
           }
-          if (!max(value, args.constraints[1])) {
+          if (!max(value, args!.constraints[1])) {
             return false;
           }
           return true;
