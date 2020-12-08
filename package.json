@@ -30,7 +30,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "main": "./src/index.ts",
   "module": "./src/index.ts",
@@ -40,6 +40,7 @@
     "src/IsDiscount.ts",
     "src/IsEmailTidy.ts",
     "src/IsPrice.ts",
+    "src/IsStringDate.ts",
     "src/IsUUID4.ts",
     "src/MinMax.ts",
     "src/MinMaxInt.ts",
