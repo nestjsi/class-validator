@@ -10,7 +10,8 @@
     }
   ],
   "dependencies": {
-    "class-validator": "*"
+    "class-validator": "*",
+    "validator": "*"
   },
   "description": "Additions for class validator",
   "devDependencies": {
@@ -23,11 +24,7 @@
   },
   "exports": {
     ".": {
-      "browser": {
-        "import": "./dist/index.mjs",
-        "require": "./dist/index.cjs"
-      },
-      "default": "./dist/index.min.js",
+      "default": "./dist/index.cjs",
       "import": "./dist/index.mjs",
       "node": {
         "import": "./dist/index.mjs",
@@ -67,5 +64,5 @@
   },
   "type": "module",
   "types": "./dist/index.d.ts",
-  "version": "0.0.9"
+  "version": "0.0.10"
 }
