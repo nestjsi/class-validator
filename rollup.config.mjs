@@ -8,7 +8,8 @@ const config = rollupConfigPkg("index", "nestjsi-class-validator", {
   input: "./src/index.ts",
 });
 
-delete config.output[2];
+config.output[2].format = "cjs";
+delete config.output[2].name;
 
 config.plugins.push(
   typescript({
