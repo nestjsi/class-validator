@@ -1,0 +1,49 @@
+{
+  "author": "Anton Trofimenko",
+  "bugs": {
+    "url": "https://github.com/nestjsi/class-validator/issues"
+  },
+  "contributors": [
+    {
+      "email": "r37r0m0d3l@protonmail.com",
+      "name": "Anton Trofimenko"
+    }
+  ],
+  "dependencies": {
+    "class-validator": "*"
+  },
+  "description": "Additions for class validator",
+  "homepage": "https://github.com/nestjsi/class-validator#readme",
+  "keywords": [
+    "decorators",
+    "typescript",
+    "validation",
+    "validator"
+  ],
+  "license": "MIT",
+  "name": "@nestjsi/class-validator",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nestjsi/class-validator.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./src/index.ts",
+  "module": "./src/index.ts",
+  "files": [
+    "src/index.ts",
+    "src/InRange.ts",
+    "src/IsDiscount.ts",
+    "src/IsEmailTidy.ts",
+    "src/IsPrice.ts",
+    "src/IsUUID4.ts",
+    "src/MinMax.ts",
+    "src/MinMaxInt.ts",
+    "src/MinMaxLength.ts",
+    "src/MinMaxPct.ts"
+  ]
+}
