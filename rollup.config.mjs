@@ -4,21 +4,15 @@ import rollupConfigPkg from "@r37r0m0d3l/rollup-config-pkg";
 import { default as core } from "@babel/core";
 import typescript from "rollup-plugin-typescript2";
 
-const config = rollupConfigPkg("index", "@nestjsi/class-validator", {
+const config = rollupConfigPkg("index", "nestjsi-class-validator", {
   input: "./src/index.ts",
 });
 
-config.output.forEach((output) => {
-  Object.assign(output, {
-    globals: {
-      "class-validator": "classValidator",
-    },
-  });
-});
+delete config.output[2];
 
 config.plugins.push(
   typescript({
-    rollupCommonJSResolveHack: false,
+    rollupCommonJSResolveHack: true,
     clean: true,
   }),
 );
