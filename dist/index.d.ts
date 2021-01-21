@@ -32,7 +32,9 @@ export const IS_PRICE = "IsPrice";
  */
 export function IsPrice(validationOptions?: ValidationOptions): PropertyDecorator;
 
-export function IsStringDate(validationOptions?: ValidationOptions): (object: unknown, propertyName: string) => void;
+export function IsStringDate(validationOptions?: ValidationOptions): PropertyDecorator;
+
+export function IsSingleLine(validationOptions?: ValidationOptions): PropertyDecorator;
 
 export const IS_UUID_4 = "isUUID4";
 /**
