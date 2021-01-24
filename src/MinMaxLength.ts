@@ -7,17 +7,20 @@ import {
   ValidationOptions,
 } from "class-validator";
 
-export const MIN_MAX_LENGTH = "MinMaxLength";
-
 /**
- * Checks if the string's length is not less than given number. Note: this function takes into account surrogate pairs.
- * If given value is not a string, then it returns false.
+ * @name MinMaxLength
+ * @decorate
+ * @description Checks if the string's length is not less than given number. If given value is not a string, then it returns false. Note: this function takes into account surrogate pairs.
+ * @param {Number} minLen The minimum length
+ * @param {Number} maxLen The maximum length
+ * @param {ValidationOptions=} validationOptions Options used to pass to validation decorators
+ * @returns {Function}
  */
-export function MinMaxLength(min: number, max: number, validationOptions?: ValidationOptions): PropertyDecorator {
+export function MinMaxLength(minLen: number, maxLen: number, validationOptions?: ValidationOptions): PropertyDecorator {
   return ValidateBy(
     {
-      constraints: [min, max],
-      name: MIN_MAX_LENGTH,
+      constraints: [minLen, maxLen],
+      name: "MinMaxLength",
       validator: {
         defaultMessage: buildMessage(
           (eachPrefix) =>
@@ -25,10 +28,10 @@ export function MinMaxLength(min: number, max: number, validationOptions?: Valid
           validationOptions,
         ),
         validate: (value, args): boolean => {
-          if (!minLength(value, args.constraints[0])) {
+          if (!minLength(value, args!.constraints[0])) {
             return false;
           }
-          if (!maxLength(value, args.constraints[1])) {
+          if (!maxLength(value, args!.constraints[1])) {
             return false;
           }
           return true;

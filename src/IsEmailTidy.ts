@@ -7,11 +7,13 @@ import {
 } from "class-validator";
 import ValidatorJS from "validator";
 
-export const IS_EMAIL_TIDY = "isEmailTidy";
-
 /**
- * Checks if the string is an email.
- * If given value is not a string, then it returns false.
+ * @name IsEmailTidy
+ * @decorate
+ * @description Checks if the string is an email. If given value is not a string, then it returns false.
+ * @param {ValidatorJS.IsEmailOptions=} options Is EMail options: allow_ip_domain, allow_utf8_local_part, domain_specific_validation, ignore_max_length
+ * @param {ValidationOptions=} validationOptions Options used to pass to validation decorators
+ * @returns {Function}
  */
 export function IsEmailTidy(
   options?: ValidatorJS.IsEmailOptions,
@@ -20,7 +22,7 @@ export function IsEmailTidy(
   return ValidateBy(
     {
       constraints: [],
-      name: IS_EMAIL_TIDY,
+      name: "IsEmailTidy",
       validator: {
         defaultMessage: buildMessage((eachPrefix) => eachPrefix + "$property must be an email", validationOptions),
         validate: (value): boolean =>

@@ -4,8 +4,15 @@ import {
   ValidationOptions,
 } from "class-validator";
 
+/**
+ * @name IsStringDate
+ * @decorate
+ * @description Is string in 'YYYY-MM-DD' format.
+ * @param {ValidationOptions=} validationOptions Options used to pass to validation decorators
+ * @returns {Function}
+ */
 export function IsStringDate(validationOptions?: ValidationOptions) {
-  return function ClassValidatorCustomIsStringDate(object: unknown, propertyName: string): void {
+  return function ClassValidatorCustomIsStringDate(object: Object, propertyName: string): void {
     registerDecorator({
       constraints: [],
       name: "IsStringDate",

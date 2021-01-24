@@ -9,10 +9,14 @@ import {
   ValidationOptions,
 } from "class-validator";
 
-export const MIN_MAX_PCT = "MinMaxPct";
-
 /**
- * Checks if a value is in a range of values with two decimal places.
+ * @name MinMaxPct
+ * @decorate
+ * @description Checks if a value is in a range of values with two decimal places.
+ * @param {Number} minValue The minimum value
+ * @param {Number} maxValue The maximum value
+ * @param {ValidationOptions=} validationOptions Options used to pass to validation decorators
+ * @returns {Function}
  */
 export function MinMaxPct(
   minValue: number,
@@ -22,7 +26,7 @@ export function MinMaxPct(
   return ValidateBy(
     {
       constraints: [minValue, maxValue],
-      name: MIN_MAX_PCT,
+      name: "MinMaxPct",
       validator: {
         defaultMessage: buildMessage(
           (eachPrefix) =>
@@ -34,10 +38,10 @@ export function MinMaxPct(
           if (!isNumber(value, { allowInfinity: false, allowNaN: false, maxDecimalPlaces: 2 })) {
             return false;
           }
-          if (!min(value, args.constraints[0])) {
+          if (!min(value, args!.constraints[0])) {
             return false;
           }
-          if (!max(value, args.constraints[1])) {
+          if (!max(value, args!.constraints[1])) {
             return false;
           }
           return true;

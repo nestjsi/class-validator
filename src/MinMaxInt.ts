@@ -10,20 +10,14 @@ import {
   ValidationOptions,
 } from "class-validator";
 
-export const MIN_MAX_INT = "MinMaxInt";
-
-/**
- * Checks if a value is in a range of integer values.
- */
-
 /**
  * @name MinMaxInt
  * @decorate
  * @description Checks is value between two integers inclusive
- * @param {Number} minimumInteger - Minimum allowed integer
- * @param {Number} maximumInteger - Maximum allowed integer
- * @param {Object=} validationOptions
- * @constructor
+ * @param {Number} minimumInteger Minimum allowed integer
+ * @param {Number} maximumInteger Maximum allowed integer
+ * @param {ValidationOptions=} validationOptions Options used to pass to validation decorators
+ * @returns {Function}
  */
 export function MinMaxInt(
   minimumInteger: number,
@@ -33,7 +27,7 @@ export function MinMaxInt(
   return ValidateBy(
     {
       constraints: [minimumInteger, maximumInteger],
-      name: MIN_MAX_INT,
+      name: "MinMaxInt",
       validator: {
         defaultMessage: buildMessage(
           (eachPrefix) =>
@@ -45,10 +39,10 @@ export function MinMaxInt(
           if (!isNumber(value, { allowInfinity: false, allowNaN: false })) {
             return false;
           }
-          if (!min(value, args.constraints[0])) {
+          if (!min(value, args!.constraints[0])) {
             return false;
           }
-          if (!max(value, args.constraints[1])) {
+          if (!max(value, args!.constraints[1])) {
             return false;
           }
           if (!isInt(value)) {

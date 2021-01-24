@@ -1,9 +1,15 @@
 import { ValidationOptions } from "class-validator";
 import ValidatorJS from "validator";
 
-export const IN_RANGE = "InRange";
 /**
- * Checks if a value is in a range of values.
+ * @name InRange
+ * @decorate
+ * @description Checks if a value is in a range of values.
+ * @param {Number} minValue The minimum value
+ * @param {Number} maxValue The maximum value
+ * @param {Number=} maxDecimalPlaces Max decimal places
+ * @param {ValidationOptions=} validationOptions Options used to pass to validation decorators
+ * @returns {Function}
  */
 export function InRange(
   minValue: number,
@@ -11,56 +17,95 @@ export function InRange(
   maxDecimalPlaces?: number,
   validationOptions?: ValidationOptions,
 ): PropertyDecorator;
-export const IS_DISCOUNT = "IsDiscount";
+
 /**
- * Checks if a value is in a range of values with two decimal places.
+ * @name IsDiscount
+ * @decorate
+ * @description Checks if a value is in a range of values with two decimal places.
+ * @param {ValidationOptions=} validationOptions Options used to pass to validation decorators
+ * @returns {Function}
  */
 export function IsDiscount(validationOptions?: ValidationOptions): PropertyDecorator;
-export const IS_EMAIL_TIDY = "isEmailTidy";
+
 /**
- * Checks if the string is an email.
- * If given value is not a string, then it returns false.
+ * @name IsEmailTidy
+ * @decorate
+ * @description Checks if the string is an email. If given value is not a string, then it returns false.
+ * @param {ValidatorJS.IsEmailOptions=} options Is EMail options: allow_ip_domain, allow_utf8_local_part, domain_specific_validation, ignore_max_length
+ * @param {ValidationOptions=} validationOptions Options used to pass to validation decorators
+ * @returns {Function}
  */
 export function IsEmailTidy(
   options?: ValidatorJS.IsEmailOptions,
   validationOptions?: ValidationOptions,
 ): PropertyDecorator;
 
-export const IS_PRICE = "IsPrice";
 /**
- * Checks if a value is in a range of values with two decimal places.
+ * @name isHTMLFree
+ * @decorate
+ * @description Checks if the string has HTML tags.
+ * @param {ValidationOptions=} validationOptions Options used to pass to validation decorators
+ * @returns {Function}
+ */
+export function isHTMLFree(
+  validationOptions?: ValidationOptions,
+): PropertyDecorator;
+
+/**
+ * @name IsPrice
+ * @decorate
+ * @description Checks if a value is in a range of values with two decimal places.
+ * @param {ValidationOptions=} validationOptions Options used to pass to validation decorators
+ * @returns {Function}
  */
 export function IsPrice(validationOptions?: ValidationOptions): PropertyDecorator;
 
-export function IsStringDate(validationOptions?: ValidationOptions): PropertyDecorator;
-
+/**
+ * @name IsSingleLine
+ * @decorate
+ * @description Checks if there are line breaks in the text.
+ * @param {ValidationOptions=} validationOptions Options used to pass to validation decorators
+ * @returns {Function}
+ */
 export function IsSingleLine(validationOptions?: ValidationOptions): PropertyDecorator;
 
-export const IS_UUID_4 = "isUUID4";
 /**
- * Checks if the string is a UUID version 4.
- * If given value is not a string, then it returns false.
+ * @name IsStringDate
+ * @decorate
+ * @description Is string in 'YYYY-MM-DD' format.
+ * @param {ValidationOptions=} validationOptions Options used to pass to validation decorators
+ * @returns {Function}
+ */
+export function IsStringDate(validationOptions?: ValidationOptions): PropertyDecorator;
+
+/**
+ * @name IsUUID4
+ * @decorate
+ * @description Checks if the string is a UUID version 4. If given value is not a string, then it returns false.
+ * @param {ValidationOptions=} validationOptions Options used to pass to validation decorators
+ * @returns {Function}
  */
 export function IsUUID4(validationOptions?: ValidationOptions): PropertyDecorator;
 
-export const MIN_MAX = "MinMax";
 /**
- * Checks if a value is in a range of values.
+ * @name MinMax
+ * @decorate
+ * @description Checks if a value is in a range of values.
+ * @param {Number} minValue The minimum value
+ * @param {Number} maxValue The maximum value
+ * @param {ValidationOptions=} validationOptions Options used to pass to validation decorators
+ * @returns {Function}
  */
 export function MinMax(minValue: number, maxValue: number, validationOptions?: ValidationOptions): PropertyDecorator;
 
-export const MIN_MAX_INT = "MinMaxInt";
-/**
- * Checks if a value is in a range of integer values.
- */
 /**
  * @name MinMaxInt
  * @decorate
  * @description Checks is value between two integers inclusive
- * @param {Number} minimumInteger - Minimum allowed integer
- * @param {Number} maximumInteger - Maximum allowed integer
- * @param {Object=} validationOptions
- * @constructor
+ * @param {Number} minimumInteger Minimum allowed integer
+ * @param {Number} maximumInteger Maximum allowed integer
+ * @param {ValidationOptions=} validationOptions Options used to pass to validation decorators
+ * @returns {Function}
  */
 export function MinMaxInt(
   minimumInteger: number,
@@ -68,18 +113,28 @@ export function MinMaxInt(
   validationOptions?: ValidationOptions,
 ): PropertyDecorator;
 
-export const MIN_MAX_LENGTH = "MinMaxLength";
 /**
- * Checks if the string's length is not less than given number. Note: this function takes into account surrogate pairs.
- * If given value is not a string, then it returns false.
+ * @name MinMaxLength
+ * @decorate
+ * @description Checks if the string's length is not less than given number. If given value is not a string, then it returns false. Note: this function takes into account surrogate pairs.
+ * @param {Number} minLen The minimum length
+ * @param {Number} maxLen The maximum length
+ * @param {ValidationOptions=} validationOptions Options used to pass to validation decorators
+ * @returns {Function}
  */
-export function MinMaxLength(min: number, max: number, validationOptions?: ValidationOptions): PropertyDecorator;
+export function MinMaxLength(minLen: number, maxLen: number, validationOptions?: ValidationOptions): PropertyDecorator;
 
-export const MIN_MAX_PCT = "MinMaxPct";
 /**
- * Checks if a value is in a range of values with two decimal places.
+ * @name MinMaxPct
+ * @decorate
+ * @description Checks if a value is in a range of values with two decimal places.
+ * @param {Number} minValue The minimum value
+ * @param {Number} maxValue The maximum value
+ * @param {ValidationOptions=} validationOptions Options used to pass to validation decorators
+ * @returns {Function}
  */
 export function MinMaxPct(minValue: number, maxValue: number, validationOptions?: ValidationOptions): PropertyDecorator;
 
 export const IS_STRING_DATE_PATTERN: "^\\d{4}\\-(0?[1-9]|1[012])\\-(0?[1-9]|[12][0-9]|3[01])$";
+
 export const IS_STRING_TIME_OF_DAY: "(?:[01]d|2[0123]):(?:[012345]d)";

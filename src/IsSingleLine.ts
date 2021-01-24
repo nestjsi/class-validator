@@ -4,8 +4,15 @@ import {
   ValidationOptions,
 } from "class-validator";
 
+/**
+ * @name IsSingleLine
+ * @decorate
+ * @description Checks if there are line breaks in the text.
+ * @param {ValidationOptions=} validationOptions Options used to pass to validation decorators
+ * @returns {Function}
+ */
 export function IsSingleLine(validationOptions?: ValidationOptions) {
-  return function ClassValidatorCustomIsSingleLine(object: unknown, propertyName: string): void {
+  return function ClassValidatorCustomIsSingleLine(object: Object, propertyName: string): void {
     registerDecorator({
       constraints: [],
       name: "IsSingleLine",

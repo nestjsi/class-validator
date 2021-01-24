@@ -1,6 +1,7 @@
 export * from "./InRange";
 export * from "./IsDiscount";
 export * from "./IsEmailTidy";
+export * from "./IsHTMLFree";
 export * from "./IsPrice";
 export * from "./IsStringDate";
 export * from "./IsUUID4";

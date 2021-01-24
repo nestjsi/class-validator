@@ -9,16 +9,18 @@ import {
   ValidationOptions,
 } from "class-validator";
 
-export const IS_DISCOUNT = "IsDiscount";
-
 /**
- * Checks if a value is in a range of values with two decimal places.
+ * @name IsDiscount
+ * @decorate
+ * @description Checks if a value is in a range of values with two decimal places.
+ * @param {ValidationOptions=} validationOptions Options used to pass to validation decorators
+ * @returns {Function}
  */
 export function IsDiscount(validationOptions?: ValidationOptions): PropertyDecorator {
   return ValidateBy(
     {
       constraints: [0.01, 99.99],
-      name: IS_DISCOUNT,
+      name: "IsDiscount",
       validator: {
         defaultMessage: buildMessage(
           (eachPrefix) =>
