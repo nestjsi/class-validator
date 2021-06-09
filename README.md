@@ -1,8 +1,8 @@
-![Class Validator](https://raw.githubusercontent.com/corefunc/nestjsi/class-validator/.github/assets/logo_128.png?raw=true "Class Validator")
+![Class Validator](https://raw.githubusercontent.com/nestjsi/class-validator/main/.github/assets/logo_128.png?raw=true "Class Validator")
 
 # Class Validator
 
-Additions for [typestack/class-validator](https://github.com/typestack/class-validator) and [validator.js](https://github.com/validatorjs/validator.js).
+[NestJS](https://github.com/nestjs/nest) specific additions for [TypeStack Class Validator](https://github.com/typestack/class-validator) and [ValidatorJS](https://github.com/validatorjs/validator.js).
 
 [![NPM Version][npm-version-img]][npm-version-url]
 [![NPM Downloads][npm-downloads-img]][npm-downloads-url]
@@ -10,8 +10,11 @@ Additions for [typestack/class-validator](https://github.com/typestack/class-val
 
 ## Reference
 
+### @InRange
+
+Checks if a value is in a range of values.
+
 ```typescript
-// Checks if a value is in a range of values.
 @InRange(
   minValue, // number
   maxValue, // number
@@ -20,58 +23,82 @@ Additions for [typestack/class-validator](https://github.com/typestack/class-val
 )
 ```
 
+### @IsDiscount
+
+Checks if a value is in a range of values with two decimal places.
+
 ```typescript
-// Checks if a value is in a range of values with two decimal places.
 @IsDiscount(
   validationOptions, // ValidationOptions
 )
 ```
 
+### @IsEmailTidy
+
+Checks if the string is an email.
+
 ```typescript
-// Checks if the string is an email.
 @IsEmailTidy(
   options, // ValidatorJS.IsEmailOptions
   validationOptions, // ValidationOptions
 )
 ```
 
+### @IsHTMLFree
+
+Checks if the string has HTML tags.
+
 ```typescript
-// Checks if the string has HTML tags.
 @IsHTMLFree(
   validationOptions, // ValidationOptions
 )
 ```
 
+### @IsPrice
+
+Checks if a value is in a range of values with two decimal places.
+
 ```typescript
-// Checks if a value is in a range of values with two decimal places.
 @IsPrice(
   validationOptions, // ValidationOptions
 )
 ```
 
+### @IsSingleLine
+
+Checks if there are line breaks in the text.
+
 ```typescript
-// Checks if there are line breaks in the text.
 @IsSingleLine(
   validationOptions, // ValidationOptions
 )
 ```
 
+### @IsStringDate
+
+Is string in 'YYYY-MM-DD' format.
+
 ```typescript
-// Is string in 'YYYY-MM-DD' format.
 @IsStringDate(
   validationOptions, // ValidationOptions
 )
 ```
 
+### @IsUUID4
+
+Checks if the string is a UUID version 4.
+
 ```typescript
-// Checks if the string is a UUID version 4.
 @IsUUID4(
   validationOptions, // ValidationOptions
 )
 ```
 
+### @MinMax
+
+Checks if a value is in a range of values.
+
 ```typescript
-// Checks if a value is in a range of values.
 @MinMax(
   minValue, // number
   maxValue, // number
@@ -79,8 +106,11 @@ Additions for [typestack/class-validator](https://github.com/typestack/class-val
 )
 ```
 
+### @MinMaxInt
+
+Checks is value between two integers inclusive.
+
 ```typescript
-// Checks is value between two integers inclusive.
 @MinMaxInt(
   minimumInteger, // number
   maximumInteger, // number
@@ -88,8 +118,11 @@ Additions for [typestack/class-validator](https://github.com/typestack/class-val
 )
 ```
 
+### @MinMaxLength
+
+Checks if the string's length is not less than given number.
+
 ```typescript
-// Checks if the string's length is not less than given number.
 @MinMaxLength(
   minLen, // number
   maxLen, // number
@@ -97,8 +130,11 @@ Additions for [typestack/class-validator](https://github.com/typestack/class-val
 )
 ```
 
+### @MinMaxPct
+
+Checks if a value is in a range of values with two decimal places.
+
 ```typescript
-// Checks if a value is in a range of values with two decimal places.
 @MinMaxPct(
   minValue, // number
   maxValue, // number
