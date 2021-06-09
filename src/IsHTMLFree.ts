@@ -7,17 +7,17 @@ import {
 } from "class-validator";
 
 /**
- * @name isHTMLFree
+ * @name IsHTMLFree
  * @decorate
  * @description Checks if the string has HTML tags.
  * @param {ValidationOptions=} validationOptions Options used to pass to validation decorators
  * @returns {Function}
  */
-export function isHTMLFree(validationOptions?: ValidationOptions): PropertyDecorator {
+export function IsHTMLFree(validationOptions?: ValidationOptions): PropertyDecorator {
   return ValidateBy(
     {
       constraints: [],
-      name: "isHTMLFree",
+      name: "IsHTMLFree",
       validator: {
         defaultMessage: buildMessage(
           (eachPrefix) => eachPrefix + "$property must be a string without HTML tags",

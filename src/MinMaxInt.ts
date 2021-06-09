@@ -13,7 +13,7 @@ import {
 /**
  * @name MinMaxInt
  * @decorate
- * @description Checks is value between two integers inclusive
+ * @description Checks is value between two integers inclusive.
  * @param {Number} minimumInteger Minimum allowed integer
  * @param {Number} maximumInteger Maximum allowed integer
  * @param {ValidationOptions=} validationOptions Options used to pass to validation decorators
