@@ -52,6 +52,15 @@ export function IsHTMLFree(
 ): PropertyDecorator;
 
 /**
+ * @name IsPositiveInt
+ * @decorate
+ * @description Checks is value positive integer.
+ * @param {ValidationOptions=} validationOptions Options used to pass to validation decorators
+ * @returns {Function}
+ */
+export function IsPositiveInt(validationOptions?: ValidationOptions): PropertyDecorator;
+
+/**
  * @name IsPrice
  * @decorate
  * @description Checks if a value is in a range of values with two decimal places.
