@@ -10,6 +10,17 @@
 
 ## Reference
 
+### @FixedLength
+
+Checks if the string's length is not less or more than given number.
+
+```typescript
+@FixedLength(
+  fixedLength, // number
+  validationOptions, // ValidationOptions
+)
+```
+
 ### @InRange
 
 Checks if a value is in a range of values.
@@ -50,6 +61,36 @@ Checks if the string has HTML tags.
 
 ```typescript
 @IsHTMLFree(
+  validationOptions, // ValidationOptions
+)
+```
+
+### @IsNotBlankString
+
+Checks if there is at least one character in the string. Removes whitespace from both ends of a string.
+
+```typescript
+@IsNotBlankString(
+  validationOptions, // ValidationOptions
+)
+```
+
+### @IsNotEmptyString
+
+Checks if there is at least one character in the string. Considers the line is not empty even if it has trimmable characters.
+
+```typescript
+@IsNotEmptyString(
+  validationOptions, // ValidationOptions
+)
+```
+
+### @IsNotNull
+
+Checks if given value is not null.
+
+```typescript
+@IsNotNull(
   validationOptions, // ValidationOptions
 )
 ```

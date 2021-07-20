@@ -14,7 +14,7 @@ import {
  * @decorate
  * @description Checks if a value is in a range of values with two decimal places.
  * @param {ValidationOptions=} validationOptions Options used to pass to validation decorators
- * @returns {Function}
+ * @returns {PropertyDecorator}
  */
 export function IsPrice(validationOptions?: ValidationOptions): PropertyDecorator {
   return ValidateBy(

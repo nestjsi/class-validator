@@ -9,7 +9,7 @@ import {
  * @decorate
  * @description Is string in 'YYYY-MM-DD' format.
  * @param {ValidationOptions=} validationOptions Options used to pass to validation decorators
- * @returns {Function}
+ * @returns {PropertyDecorator}
  */
 export function IsStringDate(validationOptions?: ValidationOptions) {
   return function ClassValidatorCustomIsStringDate(object: Object, propertyName: string): void {

@@ -11,7 +11,7 @@ import {
  * @decorate
  * @description Checks if the string has HTML tags.
  * @param {ValidationOptions=} validationOptions Options used to pass to validation decorators
- * @returns {Function}
+ * @returns {PropertyDecorator}
  */
 export function IsHTMLFree(validationOptions?: ValidationOptions): PropertyDecorator {
   return ValidateBy(

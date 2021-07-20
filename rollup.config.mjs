@@ -1,8 +1,8 @@
 /*  eslint-env node */
-import rollupConfigPkg from "@r37r0m0d3l/rollup-config-pkg";
+import { default as rollupConfigPkg } from "@r37r0m0d3l/rollup-config-pkg";
 
 import { default as core } from "@babel/core";
-import typescript from "rollup-plugin-typescript2";
+import { default as typescript } from "rollup-plugin-typescript2";
 
 const config = rollupConfigPkg("index", "nestjsi-class-validator", {
   input: "./src/index.ts",

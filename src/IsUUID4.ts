@@ -11,7 +11,7 @@ import {
  * @decorate
  * @description Checks if the string is a UUID version 4. If given value is not a string, then it returns false.
  * @param {ValidationOptions=} validationOptions Options used to pass to validation decorators
- * @returns {Function}
+ * @returns {PropertyDecorator}
  */
 export function IsUUID4(validationOptions?: ValidationOptions): PropertyDecorator {
   return ValidateBy(

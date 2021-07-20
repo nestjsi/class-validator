@@ -13,10 +13,10 @@ import {
  * @name MinMaxPct
  * @decorate
  * @description Checks if a value is in a range of values with two decimal places.
- * @param {Number} minValue The minimum value
- * @param {Number} maxValue The maximum value
+ * @param {number} minValue The minimum value
+ * @param {number} maxValue The maximum value
  * @param {ValidationOptions=} validationOptions Options used to pass to validation decorators
- * @returns {Function}
+ * @returns {PropertyDecorator}
  */
 export function MinMaxPct(
   minValue: number,
