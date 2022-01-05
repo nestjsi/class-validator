@@ -15,6 +15,7 @@ export * from "./MinMax";
 export * from "./MinMaxInt";
 export * from "./MinMaxLength";
 export * from "./MinMaxPct";
+export * from "./Money";
 
 // noinspection RegExpRedundantEscape
 export const IS_STRING_DATE_PATTERN = `^\\d{4}\\-(0?[1-9]|1[012])\\-(0?[1-9]|[12][0-9]|3[01])$` as const;

@@ -58,9 +58,7 @@ export function IsEmailTidy(
  * @param {ValidationOptions=} validationOptions Options used to pass to validation decorators
  * @returns {PropertyDecorator}
  */
-export function IsHTMLFree(
-  validationOptions?: ValidationOptions,
-): PropertyDecorator;
+export function IsHTMLFree(validationOptions?: ValidationOptions): PropertyDecorator;
 
 /**
  * @name IsNotBlankString
@@ -185,6 +183,20 @@ export function MinMaxLength(minLen: number, maxLen: number, validationOptions?:
  */
 export function MinMaxPct(minValue: number, maxValue: number, validationOptions?: ValidationOptions): PropertyDecorator;
 
+/**
+ * @name Money
+ * @decorate
+ * @description Checks if a value is in a range of values with two decimal places.
+ * @param {number=} [maxValue=562949953421311] The maximum value
+ * @param {number=} [minValue=0.01] The minimum value
+ * @param {ValidationOptions=} validationOptions Options used to pass to validation decorators
+ * @returns {PropertyDecorator}
+ * @since 0.1.4
+ */
+export function Money(maxValue?: number, minValue?: number, validationOptions?: ValidationOptions): PropertyDecorator;
+
 export const IS_STRING_DATE_PATTERN: "^\\d{4}\\-(0?[1-9]|1[012])\\-(0?[1-9]|[12][0-9]|3[01])$";
 
 export const IS_STRING_TIME_OF_DAY: "(?:[01]d|2[0123]):(?:[012345]d)";
+
+export const MAX_SAFE_FLOAT: 562949953421311;

@@ -183,6 +183,18 @@ Checks if a value is in a range of values with two decimal places.
 )
 ```
 
+### @Money
+
+Checks if a value is in a range of values with two decimal places.
+
+```typescript
+@MinMaxPct(
+  maxValue, // number = 562949953421311
+  minValue, // number = 0.01
+  validationOptions, // ValidationOptions
+)
+```
+
 ## See also
 
 [💾 My other projects](https://r37r0m0d3l.icu/open_source_map)
