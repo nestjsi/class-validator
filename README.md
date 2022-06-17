@@ -15,10 +15,10 @@
 Checks if the string's length is not less or more than given number.
 
 ```typescript
-@FixedLength(
-  fixedLength, // number
-  validationOptions, // ValidationOptions
-)
+class Class {
+  @FixedLength(2)
+  public countryCode: string = "US";
+}
 ```
 
 ### @InRange
@@ -26,12 +26,10 @@ Checks if the string's length is not less or more than given number.
 Checks if a value is in a range of values.
 
 ```typescript
-@InRange(
-  minValue, // number
-  maxValue, // number
-  maxDecimalPlaces, // number
-  validationOptions, // ValidationOptions
-)
+class Class {
+  @InRange(0.0, 100.0, 2)
+  public percentage: number = 55.55;
+}
 ```
 
 ### @IsDiscount
@@ -39,9 +37,10 @@ Checks if a value is in a range of values.
 Checks if a value is in a range of values with two decimal places.
 
 ```typescript
-@IsDiscount(
-  validationOptions, // ValidationOptions
-)
+class Class {
+  @IsDiscount()
+  public discount: number = 0.01; // 0.01 - 99.99
+}
 ```
 
 ### @IsEmailTidy
@@ -49,10 +48,10 @@ Checks if a value is in a range of values with two decimal places.
 Checks if the string is an email.
 
 ```typescript
-@IsEmailTidy(
-  options, // ValidatorJS.IsEmailOptions
-  validationOptions, // ValidationOptions
-)
+class Class {
+  @IsEmailTidy({ allow_ip_domain: true })
+  public email: string;
+}
 ```
 
 ### @IsHTMLFree
@@ -60,9 +59,10 @@ Checks if the string is an email.
 Checks if the string has HTML tags.
 
 ```typescript
-@IsHTMLFree(
-  validationOptions, // ValidationOptions
-)
+class Class {
+  @IsHTMLFree()
+  public plainText: string = "No HTML tags.";
+}
 ```
 
 ### @IsNotBlankString
@@ -70,9 +70,10 @@ Checks if the string has HTML tags.
 Checks if there is at least one character in the string. Removes whitespace from both ends of a string.
 
 ```typescript
-@IsNotBlankString(
-  validationOptions, // ValidationOptions
-)
+class Class {
+  @IsNotBlankString()
+  public readableText: string = "I can read this.";
+}
 ```
 
 ### @IsNotEmptyString
@@ -80,9 +81,10 @@ Checks if there is at least one character in the string. Removes whitespace from
 Checks if there is at least one character in the string. Considers the line is not empty even if it has trimmable characters.
 
 ```typescript
-@IsNotEmptyString(
-  validationOptions, // ValidationOptions
-)
+class Class {
+  @IsNotEmptyString()
+  public anyFilledText: string = "\t";
+}
 ```
 
 ### @IsNotNull
@@ -90,9 +92,10 @@ Checks if there is at least one character in the string. Considers the line is n
 Checks if given value is not null.
 
 ```typescript
-@IsNotNull(
-  validationOptions, // ValidationOptions
-)
+class Class {
+  @IsNotNull()
+  public nonNullable: any = true;
+}
 ```
 
 ### @IsPrice
@@ -100,9 +103,10 @@ Checks if given value is not null.
 Checks if a value is in a range of values with two decimal places.
 
 ```typescript
-@IsPrice(
-  validationOptions, // ValidationOptions
-)
+class Class {
+  @IsPrice()
+  public price: number = 99.99;
+}
 ```
 
 ### @IsSingleLine
@@ -110,9 +114,10 @@ Checks if a value is in a range of values with two decimal places.
 Checks if there are line breaks in the text.
 
 ```typescript
-@IsSingleLine(
-  validationOptions, // ValidationOptions
-)
+class Class {
+  @IsSingleLine()
+  public name: string = "John Doe";
+}
 ```
 
 ### @IsStringDate
@@ -120,9 +125,10 @@ Checks if there are line breaks in the text.
 Is string in 'YYYY-MM-DD' format.
 
 ```typescript
-@IsStringDate(
-  validationOptions, // ValidationOptions
-)
+class Class {
+  @IsStringDate()
+  public yyyymmdd: string = "2099-12-31";
+}
 ```
 
 ### @IsUUID4
@@ -130,9 +136,10 @@ Is string in 'YYYY-MM-DD' format.
 Checks if the string is a UUID version 4.
 
 ```typescript
-@IsUUID4(
-  validationOptions, // ValidationOptions
-)
+class Class {
+  @IsUUID4()
+  public id: any = "5bfadf81-5f39-4034-8fb8-afd78f1241ff";
+}
 ```
 
 ### @MinMax
@@ -140,11 +147,10 @@ Checks if the string is a UUID version 4.
 Checks if a value is in a range of values.
 
 ```typescript
-@MinMax(
-  minValue, // number
-  maxValue, // number
-  validationOptions, // ValidationOptions
-)
+class Class {
+  @MinMax(-100.0, 100.0)
+  public percentage: number = -55.55;
+}
 ```
 
 ### @MinMaxInt
@@ -152,11 +158,10 @@ Checks if a value is in a range of values.
 Checks is value between two integers inclusive.
 
 ```typescript
-@MinMaxInt(
-  minimumInteger, // number
-  maximumInteger, // number
-  validationOptions, // ValidationOptions
-)
+class Class {
+  @MinMaxInt(0, 360)
+  public angle: number = 90;
+}
 ```
 
 ### @MinMaxLength
@@ -164,11 +169,10 @@ Checks is value between two integers inclusive.
 Checks if the string's length is not less than given number.
 
 ```typescript
-@MinMaxLength(
-  minLen, // number
-  maxLen, // number
-  validationOptions, // ValidationOptions
-)
+class Class {
+  @MinMaxLength(1, 255)
+  public dictionary: string = "ADBCDEF";
+}
 ```
 
 ### @MinMaxPct
@@ -176,11 +180,10 @@ Checks if the string's length is not less than given number.
 Checks if a value is in a range of values with two decimal places.
 
 ```typescript
-@MinMaxPct(
-  minValue, // number
-  maxValue, // number
-  validationOptions, // ValidationOptions
-)
+class Class {
+  @MinMaxPct(0.0, 100.0)
+  public charge: number = 55.55;
+}
 ```
 
 ### @Money
@@ -188,11 +191,10 @@ Checks if a value is in a range of values with two decimal places.
 Checks if a value is in a range of values with two decimal places.
 
 ```typescript
-@MinMaxPct(
-  maxValue, // number = 562949953421311
-  minValue, // number = 0.01
-  validationOptions, // ValidationOptions
-)
+class Class {
+  @Money(562949953421311.0, 0.01)
+  public price: number = 10.99;
+}
 ```
 
 ## See also
@@ -200,7 +202,6 @@ Checks if a value is in a range of values with two decimal places.
 [💾 My other projects](https://r37r0m0d3l.icu/open_source_map)
 
 <img alt="Open Source" src="https://raw.githubusercontent.com/r37r0m0d3l/r37r0m0d3l/master/osmap.svg?sanitize=true" width="960" height="520" style="display:block;height:auto;margin-left:auto;margin-right:auto;min-height:520px;min-width:960px;width:100%;">
-
 
 <!-- Badges -->
 

@@ -11,17 +11,17 @@
   ],
   "dependencies": {
     "class-validator": "^0.13.*",
-    "validator": "^13.6.*"
+    "validator": "^13.7.*"
   },
   "description": "Additions for class validator",
   "devDependencies": {
-    "@babel/core": "7.12.9",
+    "@babel/core": "^7.18.5",
     "@r37r0m0d3l/rollup-config-pkg": "git+https://github.com/r37r0m0d3l/rollup-config-pkg.git",
     "@types/validator": "^13.7.1",
     "dts-generator": "3.0.0",
-    "prettier": "2.3.1",
-    "rollup-plugin-typescript2": "0.29.0",
-    "typescript": "4.3.4"
+    "prettier": "^2.7.1",
+    "rollup-plugin-typescript2": "^0.32.1",
+    "typescript": "^4.7.3"
   },
   "exports": {
     ".": {
