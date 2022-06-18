@@ -1,26 +1,19 @@
-import {
-  //
-  buildMessage,
-  isNumber,
-  max,
-  min,
-  ValidateBy,
-  ValidationArguments,
-  ValidationOptions,
-} from "class-validator";
+import { buildMessage, isNumber, max, min, ValidateBy } from "class-validator";
+
+import type { ValidationArguments, ValidationOptions } from "class-validator";
 
 /**
- * @name IsDiscount
+ * @name IsPrice
  * @decorate
  * @description Checks if a value is in a range of values with two decimal places.
  * @param {ValidationOptions=} validationOptions Options used to pass to validation decorators
  * @returns {PropertyDecorator}
  */
-export function IsDiscount(validationOptions?: ValidationOptions): PropertyDecorator {
+export function IsPrice(validationOptions?: ValidationOptions): PropertyDecorator {
   return ValidateBy(
     {
-      constraints: [0.01, 99.99],
-      name: "IsDiscount",
+      constraints: [0.01, 70_368_744_177_663.99],
+      name: "IsPrice",
       validator: {
         defaultMessage: buildMessage(
           (eachPrefix) =>

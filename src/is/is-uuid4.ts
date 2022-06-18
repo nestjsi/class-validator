@@ -1,10 +1,6 @@
-import {
-  //
-  buildMessage,
-  isUUID,
-  ValidateBy,
-  ValidationOptions,
-} from "class-validator";
+import { buildMessage, isUUID, ValidateBy } from "class-validator";
+
+import type { ValidationOptions } from "class-validator";
 
 /**
  * @name IsUUID4

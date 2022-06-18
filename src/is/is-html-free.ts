@@ -1,10 +1,6 @@
-import {
-  //
-  buildMessage,
-  isString,
-  ValidateBy,
-  ValidationOptions,
-} from "class-validator";
+import { buildMessage, isString, ValidateBy } from "class-validator";
+
+import type { ValidationOptions } from "class-validator";
 
 /**
  * @name IsHTMLFree

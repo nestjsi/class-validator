@@ -1,12 +1,6 @@
-import {
-  buildMessage,
-  isInt,
-  isNumber,
-  min,
-  ValidateBy,
-  ValidationArguments,
-  ValidationOptions
-} from "class-validator";
+import { buildMessage, isInt, isNumber, min, ValidateBy } from "class-validator";
+
+import type { ValidationArguments, ValidationOptions } from "class-validator";
 
 export const IS_POSITIVE_INT = "isPositiveInt";
 

@@ -1,14 +1,6 @@
-import {
-  //
-  buildMessage,
-  isInt,
-  isNumber,
-  max,
-  min,
-  ValidateBy,
-  ValidationArguments,
-  ValidationOptions,
-} from "class-validator";
+import { buildMessage, isInt, isNumber, max, min, ValidateBy } from "class-validator";
+
+import type { ValidationArguments, ValidationOptions } from "class-validator";
 
 /**
  * @name MinMaxInt

@@ -1,11 +1,6 @@
-import {
-  //
-  buildMessage,
-  maxLength,
-  minLength,
-  ValidateBy,
-  ValidationOptions,
-} from "class-validator";
+import { buildMessage, maxLength, minLength, ValidateBy } from "class-validator";
+
+import type { ValidationOptions } from "class-validator";
 
 /**
  * @name MinMaxLength

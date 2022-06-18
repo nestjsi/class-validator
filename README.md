@@ -10,192 +10,157 @@
 
 ## Reference
 
-### @FixedLength
-
-Checks if the string's length is not less or more than given number.
-
-```typescript
-class Class {
-  @FixedLength(2)
-  public countryCode: string = "US";
-}
-```
-
-### @InRange
-
-Checks if a value is in a range of values.
-
-```typescript
-class Class {
-  @InRange(0.0, 100.0, 2)
-  public percentage: number = 55.55;
-}
-```
-
-### @IsDiscount
-
+---
+### IS
+#### @IsDiscount
 Checks if a value is in a range of values with two decimal places.
-
 ```typescript
 class Class {
   @IsDiscount()
   public discount: number = 0.01; // 0.01 - 99.99
 }
 ```
-
-### @IsEmailTidy
-
+#### @IsEmailTidy
 Checks if the string is an email.
-
 ```typescript
 class Class {
   @IsEmailTidy({ allow_ip_domain: true })
   public email: string;
 }
 ```
-
-### @IsHTMLFree
-
+#### @IsHTMLFree
 Checks if the string has HTML tags.
-
 ```typescript
 class Class {
   @IsHTMLFree()
   public plainText: string = "No HTML tags.";
 }
 ```
-
-### @IsNotBlankString
-
+#### @IsNotBlankString
 Checks if there is at least one character in the string. Removes whitespace from both ends of a string.
-
 ```typescript
 class Class {
   @IsNotBlankString()
   public readableText: string = "I can read this.";
 }
 ```
-
-### @IsNotEmptyString
-
+#### @IsNotEmptyString
 Checks if there is at least one character in the string. Considers the line is not empty even if it has trimmable characters.
-
 ```typescript
 class Class {
   @IsNotEmptyString()
   public anyFilledText: string = "\t";
 }
 ```
-
-### @IsNotNull
-
+#### @IsNotNull
 Checks if given value is not null.
-
 ```typescript
 class Class {
   @IsNotNull()
   public nonNullable: any = true;
 }
 ```
-
-### @IsPrice
-
+#### @IsPrice
 Checks if a value is in a range of values with two decimal places.
-
 ```typescript
 class Class {
   @IsPrice()
   public price: number = 99.99;
 }
 ```
-
-### @IsSingleLine
-
+#### @IsSingleLine
 Checks if there are line breaks in the text.
-
 ```typescript
 class Class {
   @IsSingleLine()
   public name: string = "John Doe";
 }
 ```
-
-### @IsStringDate
-
+#### @IsStringDate
 Is string in 'YYYY-MM-DD' format.
-
 ```typescript
 class Class {
   @IsStringDate()
   public yyyymmdd: string = "2099-12-31";
 }
 ```
-
-### @IsUUID4
-
+#### @IsUUID4
 Checks if the string is a UUID version 4.
-
 ```typescript
 class Class {
   @IsUUID4()
   public id: any = "5bfadf81-5f39-4034-8fb8-afd78f1241ff";
 }
 ```
-
-### @MinMax
-
+---
+### NUMBER
+#### @InRange
 Checks if a value is in a range of values.
-
+```typescript
+class Class {
+  @InRange(0.00, 100.00, 2)
+  public percentage: number = 55.55;
+}
+```
+#### @InRangeInt
+Checks if a value is in a range of integer values.
+```typescript
+class Class {
+  @InRange(0, 100)
+  public percentage: number = 55;
+}
+```
+#### @MinMax
+Checks if a value is in a range of values.
 ```typescript
 class Class {
   @MinMax(-100.0, 100.0)
   public percentage: number = -55.55;
 }
 ```
-
-### @MinMaxInt
-
+#### @MinMaxInt
 Checks is value between two integers inclusive.
-
 ```typescript
 class Class {
   @MinMaxInt(0, 360)
   public angle: number = 90;
 }
 ```
-
-### @MinMaxLength
-
-Checks if the string's length is not less than given number.
-
-```typescript
-class Class {
-  @MinMaxLength(1, 255)
-  public dictionary: string = "ADBCDEF";
-}
-```
-
-### @MinMaxPct
-
+#### @MinMaxPct
 Checks if a value is in a range of values with two decimal places.
-
 ```typescript
 class Class {
   @MinMaxPct(0.0, 100.0)
   public charge: number = 55.55;
 }
 ```
-
-### @Money
-
+#### @Money
 Checks if a value is in a range of values with two decimal places.
-
 ```typescript
 class Class {
-  @Money(562949953421311.0, 0.01)
+  @Money(562_949_953_421_311.00, 0.01)
   public price: number = 10.99;
 }
 ```
+---
+### STRING
+#### @FixedLength
+Checks if the string's length is not less or more than given number.
+```typescript
+class Class {
+  @FixedLength(2)
+  public countryCode: string = "US";
+}
+```
+#### @MinMaxLength
+Checks if the string's length is not less than given number.
+```typescript
+class Class {
+  @MinMaxLength(1, 255)
+  public dictionary: string = "ADBCDEF";
+}
+```
+---
 
 ## See also
 

@@ -1,11 +1,8 @@
-import {
-  //
-  buildMessage,
-  isEmail,
-  ValidateBy,
-  ValidationOptions,
-} from "class-validator";
 import ValidatorJS from "validator";
+
+import { buildMessage, isEmail, ValidateBy } from "class-validator";
+
+import type { ValidationOptions } from "class-validator";
 
 /**
  * @name IsEmailTidy

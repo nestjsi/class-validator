@@ -1,11 +1,6 @@
-import {
-  //
-  buildMessage,
-  maxLength,
-  minLength,
-  ValidateBy,
-  ValidationOptions,
-} from "class-validator";
+import { buildMessage, maxLength, minLength, ValidateBy } from "class-validator";
+
+import type { ValidationOptions } from "class-validator";
 
 /**
  * @name FixedLength
@@ -23,8 +18,7 @@ export function FixedLength(fixedLength: number, validationOptions?: ValidationO
       name: "FixedLength",
       validator: {
         defaultMessage: buildMessage(
-          (eachPrefix) =>
-            eachPrefix + "$property must be equal to $constraint1 characters",
+          (eachPrefix) => eachPrefix + "$property must be equal to $constraint1 characters",
           validationOptions,
         ),
         validate: (value, args): boolean => {

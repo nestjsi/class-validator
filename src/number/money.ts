@@ -1,26 +1,28 @@
-import {
-  //
-  buildMessage,
-  isNumber,
-  max,
-  min,
-  ValidateBy,
-  ValidationArguments,
-  ValidationOptions,
-} from "class-validator";
+import { buildMessage, isNumber, max, min, ValidateBy } from "class-validator";
+
+import type { ValidationArguments, ValidationOptions } from "class-validator";
+
+export const MAX_SAFE_FLOAT = 562949953421311 as const;
 
 /**
- * @name IsPrice
+ * @name Money
  * @decorate
  * @description Checks if a value is in a range of values with two decimal places.
+ * @param {number=} [maxValue=562949953421311] The maximum value
+ * @param {number=} [minValue=0.01] The minimum value
  * @param {ValidationOptions=} validationOptions Options used to pass to validation decorators
  * @returns {PropertyDecorator}
+ * @since 0.1.4
  */
-export function IsPrice(validationOptions?: ValidationOptions): PropertyDecorator {
+export function Money(
+  maxValue: number = MAX_SAFE_FLOAT,
+  minValue: number = 0.01,
+  validationOptions?: ValidationOptions,
+): PropertyDecorator {
   return ValidateBy(
     {
-      constraints: [0.01, 70_368_744_177_663.99],
-      name: "IsPrice",
+      constraints: [minValue, maxValue],
+      name: "Money",
       validator: {
         defaultMessage: buildMessage(
           (eachPrefix) =>

@@ -1,4 +1,6 @@
-import { isNotEmpty, isString, registerDecorator, ValidationArguments, ValidationOptions } from "class-validator";
+import { isNotEmpty, isString, registerDecorator } from "class-validator";
+
+import type { ValidationArguments, ValidationOptions } from "class-validator";
 
 /**
  * @name IsNotEmptyString
