@@ -1,6 +1,9 @@
 # Changelog
 
-### 0.1.5
+### 0.2.0
+#### Breaking Changes
+- Minimum version of `node` is now `16.0.0`
+- All imports are now recommended to make using `import` from the path like `@nestjsi/class-validator/*`
 #### Added
 - `InRangeInt`
 

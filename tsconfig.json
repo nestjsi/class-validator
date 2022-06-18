@@ -1,25 +1,27 @@
 {
   "compilerOptions": {
     "allowJs": false,
-    "declaration": false,
+    "allowSyntheticDefaultImports": false,
+    "declaration": true,
     "emitDecoratorMetadata": false,
+    "exactOptionalPropertyTypes": false,
     "experimentalDecorators": false,
     "forceConsistentCasingInFileNames": true,
-    "lib": ["es2017.object"],
-    "module": "ESNext",
+    "incremental": true,
+    "isolatedModules": false,
+    "lib": ["ES2021"],
+    "module": "CommonJS",
     "moduleResolution": "node",
     "noImplicitReturns": true,
     "noUnusedLocals": true,
-    "plugins": [
-      {
-        "enable": true,
-        "importmap": "import_map.json",
-        "name": "typescript-deno-plugin"
-      }
-    ],
+    "plugins": [],
+    "removeComments": false,
     "resolveJsonModule": false,
+    "skipLibCheck": false,
+    "sourceMap": false,
     "strict": true,
-    "target": "ES2020",
+    "strictNullChecks": false,
+    "target": "ES2021",
     "typeRoots": ["node_modules/@types"],
     "types": ["node"]
   },
