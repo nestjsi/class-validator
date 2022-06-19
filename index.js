@@ -15,6 +15,7 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.IS_STRING_TIME_OF_DAY = exports.IS_STRING_DATE_PATTERN = void 0;
+__exportStar(require("./check/check-price"), exports);
 __exportStar(require("./is/is-discount"), exports);
 __exportStar(require("./is/is-email-tidy"), exports);
 __exportStar(require("./is/is-html-free"), exports);
@@ -28,12 +29,15 @@ __exportStar(require("./is/is-string-date"), exports);
 __exportStar(require("./is/is-uuid4"), exports);
 __exportStar(require("./number/in-range"), exports);
 __exportStar(require("./number/in-range-int"), exports);
+__exportStar(require("./number/int-min-max"), exports);
 __exportStar(require("./number/min-max"), exports);
 __exportStar(require("./number/min-max-int"), exports);
 __exportStar(require("./number/min-max-pct"), exports);
 __exportStar(require("./number/money"), exports);
 __exportStar(require("./string/fixed-length"), exports);
 __exportStar(require("./string/min-max-length"), exports);
+__exportStar(require("./string/text-length-fixed"), exports);
+__exportStar(require("./string/text-length-min-max"), exports);
 // noinspection RegExpRedundantEscape
 exports.IS_STRING_DATE_PATTERN = `^\\d{4}\\-(0?[1-9]|1[012])\\-(0?[1-9]|[12][0-9]|3[01])$`;
 exports.IS_STRING_TIME_OF_DAY = `(?:[01]d|2[0123]):(?:[012345]d)`;

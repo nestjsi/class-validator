@@ -27,6 +27,9 @@
     "index.d.ts",
     "index.js",
     "index.mjs",
+    "check/check-price.d.ts",
+    "check/check-price.js",
+    "check/check-price.mjs",
     "is/is-discount.d.ts",
     "is/is-discount.js",
     "is/is-discount.mjs",
@@ -66,6 +69,9 @@
     "number/in-range-int.d.ts",
     "number/in-range-int.js",
     "number/in-range-int.mjs",
+    "number/int-min-max.d.ts",
+    "number/int-min-max.js",
+    "number/int-min-max.mjs",
     "number/min-max.d.ts",
     "number/min-max.js",
     "number/min-max.mjs",
@@ -83,7 +89,13 @@
     "string/fixed-length.mjs",
     "string/min-max-length.d.ts",
     "string/min-max-length.js",
-    "string/min-max-length.mjs"
+    "string/min-max-length.mjs",
+    "string/text-length-fixed.d.ts",
+    "string/text-length-fixed.js",
+    "string/text-length-fixed.mjs",
+    "string/text-length-min-max.d.ts",
+    "string/text-length-min-max.js",
+    "string/text-length-min-max.mjs"
   ],
   "homepage": "https://github.com/nestjsi/class-validator#readme",
   "keywords": [
@@ -106,5 +118,5 @@
   },
   "type": "commonjs",
   "types": "index.d.ts",
-  "version": "0.2.0"
+  "version": "0.2.1"
 }

@@ -12,6 +12,7 @@ exports.MAX_SAFE_FLOAT = 562949953421311;
  * @param {ValidationOptions=} validationOptions Options used to pass to validation decorators
  * @returns {PropertyDecorator}
  * @since 0.1.4
+ * @deprecated Since 0.2.1. Use `@CheckPrice` instead.
  */
 function Money(maxValue = exports.MAX_SAFE_FLOAT, minValue = 0.01, validationOptions) {
     return (0, class_validator_1.ValidateBy)({

@@ -7,5 +7,6 @@ import type { ValidationOptions } from "class-validator";
  * @param {number} maxLen The maximum length
  * @param {ValidationOptions=} validationOptions Options used to pass to validation decorators
  * @returns {PropertyDecorator}
+ * @deprecated Since 0.2.1. Use `@TextLengthMinMax` instead.
  */
 export declare function MinMaxLength(minLen: number, maxLen: number, validationOptions?: ValidationOptions): PropertyDecorator;

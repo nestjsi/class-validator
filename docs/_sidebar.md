@@ -1,2 +1,4 @@
--   IS
-    -   [IsDiscount](/is/is-discount.md)
+- CHECK
+  -  [CheckPrice](/check/check-price.md)
+- NUMBER
+  -  [IntMinMax](/number/int-min-max.md)

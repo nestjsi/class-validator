@@ -7,5 +7,6 @@ import type { ValidationOptions } from "class-validator";
  * @param {ValidationOptions=} validationOptions Options used to pass to validation decorators
  * @returns {PropertyDecorator}
  * @since 0.1.3
+ * @deprecated Since `0.2.1`. Use `@TextLengthFixed` instead.
  */
 export declare function FixedLength(fixedLength: number, validationOptions?: ValidationOptions): PropertyDecorator;

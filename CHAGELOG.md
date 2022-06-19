@@ -1,5 +1,17 @@
 # Changelog
 
+### 0.2.1
+#### Added
+- `CheckPrice`
+- `IntMinMax`
+- `TextLengthFixed`
+- `TextLengthMinMax`
+### Deprecated
+- `FixedLength`
+- `MinMaxInt`
+- `MinMaxLength`
+- `Money`
+
 ### 0.2.0
 #### Breaking Changes
 - Minimum version of `node` is now `16.0.0`

@@ -2,33 +2,32 @@ import { buildMessage, isNumber, max, min, ValidateBy } from "class-validator";
 
 import type { ValidationArguments, ValidationOptions } from "class-validator";
 
-export const MAX_SAFE_FLOAT = 562949953421311 as const;
+export const PRICE_MAX: number = 562949953421311 as const;
 
 /**
- * @name Money
+ * @name CheckPrice
  * @decorate
  * @description Checks if a value is in a range of values with two decimal places.
+ * @summary ```import { CheckPrice } from "@nestjsi/class-validator/check/check-price";```
  * @param {number=} [maxValue=562949953421311] The maximum value
  * @param {number=} [minValue=0.01] The minimum value
  * @param {ValidationOptions=} validationOptions Options used to pass to validation decorators
  * @returns {PropertyDecorator}
- * @since 0.1.4
- * @deprecated Since 0.2.1. Use `@CheckPrice` instead.
+ * @since 0.2.1
  */
-export function Money(
-  maxValue: number = MAX_SAFE_FLOAT,
+export function CheckPrice(
+  maxValue: number = PRICE_MAX,
   minValue: number = 0.01,
   validationOptions?: ValidationOptions,
 ): PropertyDecorator {
   return ValidateBy(
     {
       constraints: [minValue, maxValue],
-      name: "Money",
+      name: "CheckPrice",
       validator: {
         defaultMessage: buildMessage(
           (eachPrefix) =>
-            eachPrefix +
-            "'$property' must be a number, not be less than $constraint1, not be greater than $constraint2 and have two max decimal places.",
+            `${eachPrefix}'$property' must be a number, not be less than $constraint1, not be greater than $constraint2 and have two max decimal places.`,
           validationOptions,
         ),
         validate(value: unknown, args?: ValidationArguments): boolean {

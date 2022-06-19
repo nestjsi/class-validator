@@ -11,6 +11,18 @@
 ## Reference
 
 ---
+### CHECK
+#### @CheckPrice
+Checks if a value is in a range of values with two decimal places.
+Since `0.2.1`.
+```typescript
+import { CheckPrice } from "@nestjsi/class-validator/check/check-price";
+class Class {
+  @CheckPrice(562_949_953_421_311.00, 0.01)
+  public price: number = 10.99;
+}
+```
+---
 ### IS
 #### @IsDiscount
 Checks if a value is in a range of values with two decimal places.
@@ -122,6 +134,16 @@ class Class {
   public percentage: number = 55;
 }
 ```
+#### @IntMinMax
+Checks is value between two integers inclusive.
+Since `0.2.1`.
+```typescript
+import { IntMinMax } from "@nestjsi/class-validator/number/int-min-max";
+class Class {
+  @IntMinMax(0, 360)
+  public angle: number = 90;
+}
+```
 #### @MinMax
 Checks if a value is in a range of values.
 ```typescript
@@ -133,6 +155,7 @@ class Class {
 ```
 #### @MinMaxInt
 Checks is value between two integers inclusive.
+Deprecated since `0.2.1`. Use `@IntMinMax` instead.
 ```typescript
 import { MinMaxInt } from "@nestjsi/class-validator/number/min-max-int";
 class Class {
@@ -151,6 +174,7 @@ class Class {
 ```
 #### @Money
 Checks if a value is in a range of values with two decimal places.
+Deprecated since `0.2.1`. Use `@CheckPrice` instead.
 ```typescript
 import { Money } from "@nestjsi/class-validator/number/money";
 class Class {
@@ -162,6 +186,7 @@ class Class {
 ### STRING
 #### @FixedLength
 Checks if the string's length is not less or more than given number.
+Deprecated since `0.2.1`. Use `@TextLengthFixed` instead.
 ```typescript
 import { FixedLength } from "@nestjsi/class-validator/string/fixed-length";
 class Class {
@@ -171,10 +196,31 @@ class Class {
 ```
 #### @MinMaxLength
 Checks if the string's length is not less than given number.
+Deprecated since `0.2.1`. Use `@TextLengthMinMax` instead.
 ```typescript
 import { MinMaxLength } from "@nestjsi/class-validator/string/min-max-length";
 class Class {
   @MinMaxLength(1, 255)
+  public dictionary: string = "ADBCDEF";
+}
+```
+#### @TextLengthFixed
+Checks if the string's length is not less than given number.
+Since `0.2.1`.
+```typescript
+import { TextLengthFixed } from "@nestjsi/class-validator/string/text-length-fixed";
+class Class {
+  @TextLengthFixed(2)
+  public countryCode: string = "US";
+}
+```
+#### @TextLengthMinMax
+Checks if the string's length is not less than given number.
+Since `0.2.1`.
+```typescript
+import { TextLengthMinMax } from "@nestjsi/class-validator/string/text-length-min-max";
+class Class {
+  @TextLengthMinMax(1, 255)
   public dictionary: string = "ADBCDEF";
 }
 ```
