@@ -114,6 +114,7 @@
     "url": "git+https://github.com/nestjsi/class-validator.git"
   },
   "scripts": {
+    "serve": "npx docsify serve docs",
     "package:update": "npx npm-check --update"
   },
   "type": "commonjs",

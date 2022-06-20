@@ -1,4 +1,4 @@
-# CHECK
+# Check
 
 ## @CheckPrice
 

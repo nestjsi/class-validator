@@ -1,4 +1,29 @@
-- CHECK
-  -  [CheckPrice](/check/check-price.md)
-- NUMBER
-  -  [IntMinMax](/number/int-min-max.md)
+- Check
+  - [@CheckPrice](/check/check-price.md)
+- Is
+  - [@IsDiscount](/is/is-discount.md)
+  - [@IsEmailTidy](/is/is-email-tidy.md)
+  - [@IsHTMLFree](/is/is-html-free.md)
+  - [@IsNotBlankString](/is/is-not-blank-string.md)
+  - [@IsNotEmptyString](/is/is-not-empty-string.md)
+  - [@IsNotNull](/is/is-not-null.md)
+  - [@IsPrice](/is/is-price.md)
+  - [@IsSingleLine](/is/is-single-line.md)
+  - [@IsStringDate](/is/is-string-date.md)
+  - [@IsUUID4](/is/is-uuid4.md)
+- Number
+  - [@InRangeInt](/number/in-range-int.md)
+  - [@InRange](/number/in-range.md)
+  - [@IntMinMax](/number/int-min-max.md)
+  - [@MinMaxInt](/number/min-max-int.md)
+  - [@MinMaxPct](/number/min-max-pct.md)
+  - [@MinMax](/number/min-max.md)
+  - [@Money](/number/money.md)
+- String
+  - [@FixedLength](/string/fixed-length.md)
+  - [@MinMaxLength](/string/min-max-length.md)
+  - [@TextLengthFixed](/string/text-length-fixed.md)
+  - [@TextLengthMinMax](/string/text-length-min-max.md)
+- Other
+  - [Changelog](/other/changelog.md)
+  - [See also](/other/see_also.md)

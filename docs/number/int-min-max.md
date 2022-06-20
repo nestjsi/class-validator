@@ -1,4 +1,4 @@
-# NUMBER
+# Number
 
 ## @IntMinMax
 
