@@ -39,6 +39,9 @@
     "is/is-html-free.d.ts",
     "is/is-html-free.js",
     "is/is-html-free.mjs",
+    "is/is-json.d.ts",
+    "is/is-json.js",
+    "is/is-json.mjs",
     "is/is-not-blank-string.d.ts",
     "is/is-not-blank-string.js",
     "is/is-not-blank-string.mjs",
@@ -119,5 +122,5 @@
   },
   "type": "commonjs",
   "types": "index.d.ts",
-  "version": "0.2.1"
+  "version": "0.2.2"
 }

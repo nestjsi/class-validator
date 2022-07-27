@@ -1,4 +1,7 @@
 # Changelog
+### 0.2.2
+#### Added
+- `IsJSON`
 ### 0.2.1
 #### Added
 - `CheckPrice`
